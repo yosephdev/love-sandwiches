@@ -1,32 +1,45 @@
+# Sandwich Automator
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome,
+Welcome to Sandwich Automator, a Python command-line application designed to automate data processes for a fictional sandwich company called Love Sandwiches.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+## Overview
 
-## Reminders
+This application interacts with Google Sheets to collect and process sales data, calculate surplus, and make recommendations for future stock. It's deployed on Heroku, and you can access it [here](https://sandwich-automator-4e93d4a0a85f.herokuapp.com/).
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## Getting Started
 
-## Creating the Heroku app
+### Prerequisites
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+- Python 3
+- Google Sheets API credentials (`creds.json`)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### Installation
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+1. Clone the repository: `git clone https://github.com/yosephdev/love-sandwiches`
+2. Install dependencies: `pip install -r requirements.txt`
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Usage
 
-Connect your GitHub repository and deploy as normal.
+Run the app using the following command:
 
-## Constraints
+```bash
+python3 run.py
+```
+Follow the prompts to enter sales data and let the app automate the process.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## Key Features
 
----
+- **Sales Data Entry**: Collects sales figures from the user for the last market.
+- **Surplus Calculation**: Compares sales with stock to calculate surplus or waste.
+- **Stock Recommendation**: Calculates the average stock for each item type and adds 10% for future markets.
 
-Happy coding!
+## Code Structure
+
+- **`run.py`**: Main Python file containing the project code.
+- **`requirements.txt`**: File listing project dependencies.
+
+## Deployed App
+
+The app is deployed on Heroku. Access it [here](https://sandwich-automator-4e93d4a0a85f.herokuapp.com/).
